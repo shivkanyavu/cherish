@@ -505,3 +505,160 @@
   50% { transform: translateY(-25px); }
   100% { transform: translateY(0px); }
 }
+/* ============================= */
+/* HERO RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 1200px) {
+  .hero-section {
+    min-height: 80vh;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-section {
+    min-height: 75vh;
+    padding: 80px 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 38px;
+  }
+
+  .hero-section h4 {
+    font-size: 20px;
+  }
+
+  .hero-section p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 70vh;
+    padding: 60px 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 28px;
+  }
+
+  .hero-section h4 {
+    font-size: 18px;
+  }
+
+  .hero-section p {
+    font-size: 14px;
+  }
+
+  .hero-section button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 22px;
+  }
+
+  .hero-section h4 {
+    font-size: 16px;
+  }
+
+  .hero-section p {
+    font-size: 13px;
+  }
+}
+/* ============================= */
+/* FLIP CARD RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 992px) {
+  .flip-card-inner {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .flip-card-inner {
+    height: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .flip-card-inner {
+    height: 260px;
+  }
+
+  .flip-card-front h5 {
+    font-size: 16px;
+  }
+
+  .flip-card-back {
+    font-size: 13px;
+    padding: 15px;
+  }
+}
+/* ============================= */
+/* SIGNATURE SECTION RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 992px) {
+  .signature-card {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .signature-content {
+    padding: 20px;
+  }
+
+  .signature-content h5 {
+    font-size: 16px;
+  }
+
+  .signature-content p {
+    font-size: 13px;
+  }
+}
+/* ============================= */
+/* APPOINTMENT SECTION RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 992px) {
+  .ad-heading {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .ad-p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .appointment-ad {
+    text-align: center;
+    padding: 40px 15px;
+  }
+
+  .btn-outline-custom {
+    width: 100%;
+    margin-top: 15px;
+    animation: none; /* stop floating on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .ad-heading {
+    font-size: 16px;
+  }
+
+  .ad-p {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}

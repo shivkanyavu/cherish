@@ -560,3 +560,125 @@ font-weight: 700;
     font-size: 14px;
   }
 }
+/* ============================= */
+/* RESPONSIVE FLOAT WIDGETS */
+/* ============================= */
+
+/* Large Screens (1400px+) */
+@media (min-width: 1400px) {
+  .scroll-widget,
+  .whatsapp-widget {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .scroll-widget {
+    right: 40px;
+    bottom: 50px;
+  }
+
+  .whatsapp-widget {
+    right: 40px;
+    bottom: 130px;
+  }
+}
+
+
+/* Laptop Screens */
+@media (max-width: 1200px) {
+  .scroll-widget,
+  .whatsapp-widget {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+
+  .scroll-widget {
+    right: 25px;
+    bottom: 35px;
+  }
+
+  .whatsapp-widget {
+    right: 25px;
+    bottom: 100px;
+  }
+}
+
+
+/* Tablet */
+@media (max-width: 992px) {
+  .scroll-widget,
+  .whatsapp-widget {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .scroll-widget {
+    right: 20px;
+    bottom: 25px;
+  }
+
+  .whatsapp-widget {
+    right: 20px;
+    bottom: 85px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .scroll-widget,
+  .whatsapp-widget {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .scroll-widget {
+    right: 15px;
+    bottom: 20px;
+  }
+
+  .whatsapp-widget {
+    right: 15px;
+    bottom: 75px;
+  }
+
+  /* Reduce animation on mobile for smoother performance */
+  .scroll-widget,
+  .whatsapp-widget {
+    animation: none;
+  }
+}
+
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .scroll-widget,
+  .whatsapp-widget {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .scroll-widget {
+    right: 12px;
+    bottom: 18px;
+  }
+
+  .whatsapp-widget {
+    right: 12px;
+    bottom: 65px;
+  }
+}
+.scroll-widget,
+.whatsapp-widget {
+  transition: all 0.3s ease;
+}
+
+footer:hover ~ .scroll-widget,
+footer:hover ~ .whatsapp-widget {
+  opacity: 0.8;
+}
