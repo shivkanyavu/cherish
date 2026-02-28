@@ -1,0 +1,294 @@
+/* ============================= */
+/* SECTION BASE */
+/* ============================= */
+
+.treatment-section {
+  background: linear-gradient(135deg, #f9f4fb, #f1e6f5);
+}
+
+
+
+
+ 
+/* ============================= */
+/* PREMIUM BEFORE AFTER SECTION */
+/* ============================= */
+
+.ba-premium-section {
+  background: linear-gradient(135deg, #f9f4fb, #f1e6f5);
+}
+
+/* Container */
+.ba-premium-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 25px;
+  cursor: ew-resize;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  transition: 0.4s ease;
+}
+
+/* Hover Lift */
+.ba-premium-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 80px rgba(74,50,103,0.25);
+}
+
+/* Images */
+.ba-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+.ba-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Glowing Divider */
+.ba-divider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #F58529,
+    #DD2A7B,
+    #8134AF,
+    #515BD4
+  );
+  box-shadow: 0 0 15px rgba(221,42,123,0.6);
+  animation: shimmerDivider 3s infinite linear;
+}
+
+/* Divider Shimmer */
+@keyframes shimmerDivider {
+  0% { box-shadow: 0 0 10px rgba(221,42,123,0.3); }
+  50% { box-shadow: 0 0 25px rgba(221,42,123,0.9); }
+  100% { box-shadow: 0 0 10px rgba(221,42,123,0.3); }
+}
+
+/* Labels */
+.ba-label {
+  position: absolute;
+  top: 15px;
+  padding: 6px 16px;
+  font-size: 12px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.65);
+  color: white;
+  backdrop-filter: blur(5px);
+}
+
+.ba-label.before {
+  left: 15px;
+}
+
+.ba-label.after {
+  right: 15px;
+}
+
+/* Title */
+.ba-title {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+
+
+/* ============================= */
+/* HERO STYLE TREATMENT SLIDER */
+/* ============================= */
+
+.treatment-slider-section {
+  background: linear-gradient(135deg, #fdf9ff, #f2eaf6);
+  position: relative;
+  overflow: hidden;
+}
+
+/* SLIDER WRAPPER */
+.treatment-slider {
+  position: relative;
+  min-height: 520px; /* desktop height */
+}
+
+/* SLIDE BASE */
+.slide {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease;
+}
+
+/* ACTIVE SLIDE */
+.slide.active {
+ 
+  opacity: 1;
+  visibility: visible;
+}
+
+/* IMAGE */
+.slider-img {
+  width: 100%;
+  border-radius: 25px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+ height: 450px;          
+  object-fit: cover; 
+
+  transform: scale(1);
+  transition: transform 1.5s ease-in-out;
+}
+
+/* HERO STYLE SLOW ZOOM */
+.slide.active .slider-img {
+  transform: scale(1.08);
+}
+
+/* TEXT CONTENT */
+.slider-content {
+  padding: 30px;
+}
+
+/* TEXT FADE ANIMATION */
+.slide.active .slider-content {
+  animation: textFadeUp 1.2s ease forwards;
+}
+
+@keyframes textFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HEADINGS */
+.slider-content h4 {
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+/* PARAGRAPH */
+.slider-content p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* ===================================== */
+/* 📱 RESPONSIVE FIX – BEFORE/AFTER */
+/* ===================================== */
+
+@media (max-width: 1200px) {
+  .ba-premium-container {
+    height: 320px;
+  }
+ 
+ 
+}
+
+@media (max-width: 991px) {
+
+  .ba-premium-container {
+    height: 280px;
+  }
+
+  .ba-title {
+    font-size: 16px;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+
+  .ba-premium-container {
+    height: 240px;
+  }
+
+  .ba-label {
+    font-size: 10px;
+    padding: 5px 12px;
+  }
+ 
+}
+
+@media (max-width: 576px) {
+
+  .ba-premium-container {
+    height: 220px;
+    border-radius: 18px;
+  }
+
+  .ba-title {
+    font-size: 15px;
+  }
+
+}
+@media (max-width: 991px) {
+
+ .treatment-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 20px;
+    min-height: auto;
+  }
+
+  .slide {
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+  }
+
+  .slider-img {
+    height: 280px;
+  }
+
+  .slider-content {
+    padding: 15px 0;
+    text-align: center;
+  }
+    /* Chrome, Edge, Safari */
+  .treatment-slider::-webkit-scrollbar {
+    height: 8px;
+  }
+ .treatment-slider::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      45deg,
+      #F58529,
+      #DD2A7B,
+      #8134AF,
+      #515BD4
+    );
+    border-radius: 20px;
+  }
+
+  .treatment-slider::-webkit-scrollbar-thumb:hover {
+    box-shadow: 0 0 8px rgba(221, 42, 123, 0.6);
+  }
+
+ 
+
+}

@@ -1,0 +1,507 @@
+/* ============================= */
+/* HERO SLIDESHOW BACKGROUND */
+/* ============================= */
+
+.hero-section {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  
+}
+
+/* Slides container */
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Each slide */
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: slideShow 18s infinite;
+}
+
+/* Replace with your real images */
+.slide1 {
+  background-image: url('../../../assets/Cherish/banner1.jpg');
+  animation-delay: 0s;
+}
+
+.slide2 {
+  background-image: url('../../../assets/Cherish/images.jpg');
+  animation-delay: 6s;
+}
+
+.slide3 {
+  background-image: url('../../../assets/Cherish/banner3.jpg');
+  animation-delay: 12s;
+}
+
+/* Fade animation */
+@keyframes slideShow {
+  0% { opacity: 0; transform: scale(1); }
+  5% { opacity: 1; }
+  30% { opacity: 1; transform: scale(1.08); }
+  35% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Overlay */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgb(247, 242, 249, 0.5),
+    rgb(241, 230, 245, 0.25)
+  );
+  z-index: 1;
+}
+
+/* Content above slides */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Text fade-in */
+.hero-section h1,
+.hero-section h3,
+.hero-section p,
+.hero-section button {
+  animation: heroFadeUp 1.2s ease forwards;
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ============================= */
+/* EXPERTISE SECTION */
+/* ============================= */
+.expertise-section {
+  position: relative;
+  overflow: hidden;
+ 
+  padding: 120px 0;
+}
+/* Gradient Overlay */
+.expertise-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+   background: linear-gradient(
+    135deg,
+    #f7f2f9,
+    #f1e6f5
+  );
+  z-index: 0;
+}
+
+/* Keep content above gradient */
+.expertise-section .container {
+  position: relative;
+  z-index: 2;
+}
+/* ============================= */
+/* ULTRA PREMIUM BACKGROUND GLOW */
+/* ============================= */
+
+.expertise-section::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle,
+    rgba(222,99,138,0.25),
+    transparent 70%);
+  top: -200px;
+  right: -200px;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: floatGlow 10s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes floatGlow {
+  from { transform: translateY(0px); }
+  to { transform: translateY(40px); }
+}
+
+/* Title */
+.doctor-section-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Intro */
+.intro-text {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Qualification Items */
+.qualification-item {
+  position: relative;
+  margin-bottom: 22px;
+  padding-left: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Gradient Left Border */
+.qualification-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  bottom: 5px;
+  width: 4px;
+  border-radius: 4px;
+
+  background: linear-gradient(
+    45deg,
+    #F58529,
+    #DD2A7B,
+    #8134AF,
+    #515BD4
+  );
+
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* Animated Gradient */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hover effect */
+.qualification-item:hover {
+  transform: translateX(8px);
+}
+/* .qualification-item {
+  margin-bottom: 18px;
+  padding-left: 15px;
+  border-left: 3px solid var(--primary);
+  transition: all 0.3s ease;
+} */
+
+.qualification-item h6 {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--primary-dark);
+}
+
+.qualification-item p {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+}
+
+
+
+/* ============================= */
+/* DOCTOR IMAGE STYLING */
+/* ============================= */
+
+.doctor-img-wrapper {
+   position: relative;
+  z-index: 3;
+  margin-top: -60px;   
+  margin-bottom: -60px;
+  overflow: hidden;
+  border-radius: 20px;
+   /* animation: fadeLeft 2s ease forwards; */
+   perspective: 1000px;
+}
+
+.doctor-img {
+  height: 550px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+
+/* Smooth zoom on hover */
+.doctor-img-wrapper:hover .doctor-img {
+   transform: rotateY(16deg) scale(1.05);
+  border-radius: 20px;
+}
+
+
+
+.doctor-section-title,
+.intro-text,
+.btn-premium {
+  animation: fadeRight 2s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.qualification-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: revealUp 0.8s forwards;
+}
+
+.qualification-item:nth-child(1) { animation-delay: 0.2s; }
+.qualification-item:nth-child(2) { animation-delay: 0.4s; }
+.qualification-item:nth-child(3) { animation-delay: 0.6s; }
+.qualification-item:nth-child(4) { animation-delay: 0.8s; }
+.qualification-item:nth-child(5) { animation-delay: 1.0s; }
+.qualification-item:nth-child(6) { animation-delay: 1.2s; }
+.qualification-item:nth-child(7) { animation-delay: 1.4s; }
+.qualification-item:nth-child(8) { animation-delay: 1.6s; }
+
+@keyframes revealUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Our Special Services */
+/* ============================= */
+/* FLIP CARD GRID */
+/* ============================= */
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  text-align: center;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT & BACK */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* FRONT */
+.flip-card-front {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+}
+
+.flip-card-front h5 {
+  padding: 15px;
+  font-weight: 600;
+  background: white;
+  margin: 0;
+}
+
+/* BACK */
+.flip-card-back {
+  background: linear-gradient(135deg,#DE638A,#4A3267);
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  font-size: 15px;
+}
+
+/* Subtle hover lift */
+.flip-card:hover {
+  transform: translateY(-8px);
+  transition: 0.4s ease;
+}
+/* signature treatment section */
+/* ============================= */
+/* SIGNATURE ROTATING BORDER CARDS */
+/* ============================= */
+
+.signature-card {
+  position: relative;
+  padding: 5px; /* border thickness */
+  border-radius: 20px;
+  overflow: hidden;
+  height: 250px;
+}
+
+/* Rotating Gradient Border */
+.signature-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 22px;
+  
+  background: linear-gradient(
+    45deg,
+    #F58529,
+    #DD2A7B,
+    #8134AF,
+    #515BD4,
+    #F58529
+  );
+
+  background-size: 400% 400%;
+  animation: rotateGradient 5s linear infinite;
+  z-index: 0;
+}
+
+ 
+/* Inner White Content */
+.signature-content {
+  position: relative;
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  height: 100%;
+  z-index: 2;
+  transition: 0.3s ease;
+}
+
+/* Animation */
+@keyframes rotateGradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+/* Hover Effect */
+.signature-card:hover .signature-content {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(74,50,103,0.2);
+}
+
+/* Typography */
+.signature-content h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--primary-dark);
+}
+
+.signature-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ============================= */
+/* ANIMATED GRADIENT appointment */
+/* ============================= */
+
+.appointment-ad {
+  position: relative;
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+/* Background Div */
+.animated-gradient-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+ background: linear-gradient(
+    rgba(147, 120, 180, 0.65),
+    rgba(219, 137, 163, 0.55)
+  );
+
+  background-size: 400% 400%;
+  animation: gradientMove 2s ease infinite;
+}
+
+/* Smooth Animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Content above background */
+.appointment-ad .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Heading Style */
+.ad-heading {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  color: #2E1F3D;
+  text-transform: uppercase;
+}
+.ad-p{
+     font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  color: #251932;
+  text-transform: uppercase;
+
+}
+.btn-outline-custom{
+    transition: all 0.3s ease;
+    animation: floatIcon 4s ease-in-out infinite;
+}
+/* Floating Motion */
+@keyframes floatIcon {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-25px); }
+  100% { transform: translateY(0px); }
+}

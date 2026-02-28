@@ -1,0 +1,104 @@
+<nav class="navbar navbar-expand-lg fixed-top custom-navbar"
+     [class.scrolled]="isScrolled"
+     [class.menu-open]="isMenuOpen">
+
+  <div class="container d-flex align-items-center">
+
+    <!-- 1️⃣ LOGO -->
+    <a class="navbar-brand"
+       routerLink="/">
+      <img src="assets/Cherish/logo.png"
+           class="logo-img"
+           alt="Cherish Logo">
+    </a>
+
+    <!-- 2️⃣ CENTER MENU -->
+    <div class="collapse navbar-collapse justify-content-center"
+         [class.show]="isMenuOpen"
+         id="navbarNav">
+
+      <!-- CLOSE BUTTON (Mobile Only) -->
+      <div class="mobile-close d-lg-none">
+        <button class="close-btn"
+                (click)="toggleMenu()">✕</button>
+      </div>
+
+      <ul class="navbar-nav gap-4 mx-auto">
+
+        <li class="nav-item">
+          <a routerLink="/"
+             routerLinkActive="active-link"
+             [routerLinkActiveOptions]="{ exact: true }"
+             class="nav-link"
+             (click)="isMenuOpen = false">
+            Home
+            <span class="hover-line"></span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="/about"
+             routerLinkActive="active-link"
+             class="nav-link"
+             (click)="isMenuOpen = false">
+            About
+            <span class="hover-line"></span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="/services"
+             routerLinkActive="active-link"
+             class="nav-link"
+             (click)="isMenuOpen = false">
+            Services
+            <span class="hover-line"></span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="/treatment"
+             routerLinkActive="active-link"
+             class="nav-link"
+             (click)="isMenuOpen = false">
+            Treatments
+            <span class="hover-line"></span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="/contact"
+             routerLinkActive="active-link"
+             class="nav-link"
+             (click)="isMenuOpen = false">
+            Contact
+            <span class="hover-line"></span>
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- 3️⃣ RIGHT SIDE (ICONS + TOGGLE) -->
+    <div class="d-flex align-items-center ms-auto">
+
+      <div class="nav-social d-flex align-items-center gap-3">
+        <a href="#" class="nav-icon google"><i class="bi bi-google"></i></a>
+        <a href="#" class="nav-icon instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="nav-icon facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="nav-icon linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <!-- Toggle (Mobile Only) -->
+      <button class="navbar-toggler ms-2"
+              type="button"
+              (click)="toggleMenu()"
+              *ngIf="!isMenuOpen">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    </div>
+
+  </div>
+</nav>

@@ -1,0 +1,258 @@
+/* ============================= */
+/* EXPERTISE SECTION */
+/* ============================= */
+.expertise-section {
+  position: relative;
+  overflow: hidden;
+ 
+  padding: 120px 0;
+}
+/* Gradient Overlay */
+.expertise-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+   background: linear-gradient(
+    135deg,
+    #f7f2f9,
+    #f1e6f5
+  );
+  z-index: 0;
+}
+
+/* Keep content above gradient */
+.expertise-section .container {
+  position: relative;
+  z-index: 2;
+}
+/* ============================= */
+/* ULTRA PREMIUM BACKGROUND GLOW */
+/* ============================= */
+
+.expertise-section::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle,
+    rgba(222,99,138,0.25),
+    transparent 70%);
+  top: -200px;
+  right: -200px;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: floatGlow 10s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes floatGlow {
+  from { transform: translateY(0px); }
+  to { transform: translateY(40px); }
+}
+
+/* Title */
+.doctor-section-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Intro */
+.intro-text {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Qualification Items */
+.qualification-item {
+  position: relative;
+  margin-bottom: 22px;
+  padding-left: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Gradient Left Border */
+.qualification-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  bottom: 5px;
+  width: 4px;
+  border-radius: 4px;
+
+  background: linear-gradient(
+    45deg,
+    #F58529,
+    #DD2A7B,
+    #8134AF,
+    #515BD4
+  );
+
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* Animated Gradient */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hover effect */
+.qualification-item:hover {
+  transform: translateX(8px);
+}
+/* .qualification-item {
+  margin-bottom: 18px;
+  padding-left: 15px;
+  border-left: 3px solid var(--primary);
+  transition: all 0.3s ease;
+} */
+
+.qualification-item h6 {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--primary-dark);
+}
+
+.qualification-item p {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+}
+
+
+
+/* ============================= */
+/* DOCTOR IMAGE STYLING */
+/* ============================= */
+
+.doctor-img-wrapper {
+   position: relative;
+  z-index: 3;
+  margin-top: -60px;   
+  margin-bottom: -60px;
+  overflow: hidden;
+  border-radius: 20px;
+   /* animation: fadeLeft 2s ease forwards; */
+   perspective: 1000px;
+}
+
+.doctor-img {
+  height: 550px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+
+/* Smooth zoom on hover */
+.doctor-img-wrapper:hover .doctor-img {
+   transform: rotateY(16deg) scale(1.05);
+  border-radius: 20px;
+}
+
+
+
+.doctor-section-title,
+.intro-text
+{
+  animation: fadeRight 2s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.qualification-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: revealUp 0.8s forwards;
+}
+
+.qualification-item:nth-child(1) { animation-delay: 0.2s; }
+.qualification-item:nth-child(2) { animation-delay: 0.4s; }
+.qualification-item:nth-child(3) { animation-delay: 0.6s; }
+.qualification-item:nth-child(4) { animation-delay: 0.8s; }
+.qualification-item:nth-child(5) { animation-delay: 1.0s; }
+.qualification-item:nth-child(6) { animation-delay: 1.2s; }
+.qualification-item:nth-child(7) { animation-delay: 1.4s; }
+.qualification-item:nth-child(8) { animation-delay: 1.6s; }
+
+@keyframes revealUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================= */
+/* RESPONSIVE FIX */
+/* ============================= */
+
+@media (max-width: 991px) {
+
+  .expertise-section {
+    padding: 70px 0;
+  }
+
+  .doctor-img-wrapper {
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .doctor-img {
+    height: auto;
+    max-height: 400px;
+    width: 35%;
+    object-fit: cover;
+  }
+ 
+}
+@media (max-width: 768px) {
+
+  .doctor-section-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .intro-text {
+    text-align: center;
+  }
+  .qualification-item {
+    padding-left: 15px;
+    margin-bottom: 18px;
+  }
+
+  .qualification-item h6 {
+    font-size: 15px;
+  }
+
+  .qualification-item p {
+    font-size: 13px;
+  }
+ .btn{
+  align-content: center;
+  animation: none;
+ }
+}

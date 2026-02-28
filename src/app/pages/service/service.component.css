@@ -1,0 +1,266 @@
+
+/* ============================= */
+/* service SECTION */
+/* ============================= */
+
+.service-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    -45deg,
+    #fdf9ff,
+    #f3eaf9,
+    #f8f1fb,
+    #ede3f6
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 20s ease infinite;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* title */
+.service-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: center;
+}
+
+.service-intro {
+  font-size: 17px;
+  color: #555;
+ 
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* ============================= */
+/* SERVICES GRID LAYOUT */
+/* ============================= */
+
+.services-grid {
+  background: linear-gradient(
+    135deg,
+    #fdf9ff,
+    #f3eaf9
+  );
+}
+
+/* Category Card */
+.service-category {
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+  transition: 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+}
+
+/* Gradient Left Border */
+.service-category::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(
+    45deg,
+    #F58529,
+    #DD2A7B,
+    #8134AF,
+    #515BD4
+  );
+}
+
+/* Hover Effect */
+.service-category:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(74,50,103,0.2);
+}
+
+/* Category Title */
+.service-category h4 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+/* List Style */
+.service-category ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.service-category li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Small Dot */
+.service-category li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #DD2A7B;
+  font-weight: bold;
+}
+/* ============================= */
+/* TECHNOLOGY SECTION */
+/* ============================= */
+
+.technology-section {
+  background: #ffffff;
+}
+
+.tech-img {
+ height: 280px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.signature-card:hover .tech-img {
+  transform: scale(1.05);
+}
+/* ============================= */
+/* SIGNATURE ROTATING BORDER CARDS */
+/* ============================= */
+
+.signature-card {
+  position: relative;
+  /* height: ; */
+  padding: 5px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.signature-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 22px;
+
+  background: linear-gradient(
+    45deg,
+    #F58529,
+    #DD2A7B,
+    #8134AF,
+    #515BD4,
+    #F58529
+  );
+
+  background-size: 400% 400%;
+  animation: rotateGradient 5s linear infinite;
+  z-index: 0;
+}
+
+.signature-content {
+  position: relative;
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  height: 100%;
+  z-index: 2;
+  transition: 0.3s ease;
+}
+
+@keyframes rotateGradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+.signature-card:hover .signature-content {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(74,50,103,0.2);
+}
+
+h5{
+  color: var(--primary);
+  font-weight: 700;
+}
+p{
+  color: #555;
+  text-align: center;
+}
+/* ===================================== */
+/* 📱 MOBILE RESPONSIVE (UNDER 991px) */
+/* ===================================== */
+
+@media (max-width: 991px) {
+
+  /* Reduce section spacing */
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  /* Title */
+  .service-title {
+    font-size: 30px;
+  }
+
+  .service-intro {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  /* Service Cards */
+  .service-category {
+    padding: 25px;
+    border-radius: 18px;
+    text-align: left;
+  }
+
+  .service-category h4 {
+    font-size: 18px;
+  }
+
+  .service-category li {
+    font-size: 15px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .tech-img {
+    height: auto;
+    max-height: 200px;
+    width: 100%;
+  }
+
+  .signature-content {
+    padding: 22px;
+  }
+
+  .signature-content h5 {
+    font-size: 18px;
+  }
+
+  .signature-content p {
+    font-size: 16px;
+    text-align: center;
+  }
+    .row {
+    gap: 10px !important;
+  }
+
+}
+@media (max-width: 576px) {
+
+  .row.g-4 {
+    gap: 10px !important;
+  }
+
+}

@@ -1,0 +1,285 @@
+<section class="treatment-section section-padding">
+
+  <div class="container">
+
+    <!-- ============================= -->
+    <!-- BEFORE & AFTER SECTION -->
+    <!-- ============================= -->
+
+    <h2 class="section-title mb-5">
+      Skin & Hair Journeys by Dr. Kruti
+    </h2>
+    <div class="row g-5">
+
+      <!-- CASE 1 -->
+      <div class="col-lg-4 col-md-6">
+        <h5 class="ba-title text-center mt-3">
+          Acne & Scar Treatment
+        </h5>
+        <div class="ba-premium-container"
+          (mousemove)="onMove($event)"
+          (touchmove)="onMove($event)">
+
+          <!-- AFTER IMAGE (BASE) -->
+          <img src="../../../assets/treatments/after-acne.jpg" class="ba-img">
+
+          <!-- BEFORE IMAGE (OVERLAY) -->
+          <div class="ba-overlay">
+            <img src="../../../assets/treatments/before-acne.jpg"
+              class="ba-img">
+          </div>
+
+          <!-- Divider Line -->
+          <div class="ba-divider"></div>
+
+          <!-- Labels -->
+          <div class="ba-label before">Before</div>
+          <div class="ba-label after">After</div>
+
+        </div>
+
+      </div>
+
+      <!-- CASE 2 -->
+      <div class="col-lg-4 col-md-6">
+        <h5 class="ba-title text-center mt-3">
+          Hair PRP
+        </h5>
+        <div class="ba-premium-container"
+          (mousemove)="onMove($event)"
+          (touchmove)="onMove($event)">
+          <img src="../../../assets/treatments/after-hair.jpg" class="ba-img">
+
+          <div class="ba-overlay">
+            <img src="../../../assets/treatments/before-hair.jpg"
+              class="ba-img">
+          </div>
+
+          <div class="ba-divider"></div>
+
+          <div class="ba-label before">Before</div>
+          <div class="ba-label after">After</div>
+
+        </div>
+
+      </div>
+
+      <!-- CASE 3 -->
+      <div class="col-lg-4 col-md-6">
+        <h5 class="ba-title text-center mt-3">
+          Pigmentation
+        </h5>
+        <div class="ba-premium-container"
+          (mousemove)="onMove($event)"
+          (touchmove)="onMove($event)">
+          <img src="../../../assets/treatments/After-pigmen.jpg" class="ba-img">
+
+          <div class="ba-overlay">
+            <img src="../../../assets/treatments/before-pigmen.jpg"
+              class="ba-img">
+          </div>
+
+          <div class="ba-divider"></div>
+
+          <div class="ba-label before">Before</div>
+          <div class="ba-label after">After</div>
+
+        </div>
+
+      </div>
+      <!-- CASE 4 -->
+      <div class="col-lg-4 col-md-6">
+        <h5 class="ba-title text-center mt-3">
+          Hair Fall
+        </h5>
+        <div class="ba-premium-container"
+          (mousemove)="onMove($event)"
+          (touchmove)="onMove($event)">
+          <img src="../../../assets/treatments/after-hairfall.jpg"
+            class="ba-img">
+
+          <div class="ba-overlay">
+            <img src="../../../assets/treatments/before-hairfall.jpg"
+              class="ba-img">
+          </div>
+
+          <div class="ba-divider"></div>
+
+          <div class="ba-label before">Before</div>
+          <div class="ba-label after">After</div>
+
+        </div>
+
+      </div>
+      <!-- CASE 5 -->
+      <div class="col-lg-4 col-md-6">
+        <h5 class="ba-title text-center mt-3">
+          Mole Removal
+        </h5>
+        <div class="ba-premium-container"
+          (mousemove)="onMove($event)"
+          (touchmove)="onMove($event)">
+          <img src="../../../assets/treatments/after-mole.jpg" class="ba-img">
+
+          <div class="ba-overlay">
+            <img src="../../../assets/treatments/before-Mole.jpg"
+              class="ba-img">
+          </div>
+
+          <div class="ba-divider"></div>
+
+          <div class="ba-label before">Before</div>
+          <div class="ba-label after">After</div>
+
+        </div>
+
+      </div>
+      <!-- CASE 6 -->
+      <div class="col-lg-4 col-md-6">
+        <h5 class="ba-title text-center mt-3">
+          Tatto Removal
+        </h5>
+        <div class="ba-premium-container"
+          (mousemove)="onMove($event)"
+          (touchmove)="onMove($event)">
+          <img src="../../../assets/treatments/tatto-remove.jpg" class="ba-img">
+
+          <div class="ba-overlay">
+            <img src="../../../assets/treatments/tatto.jpg" class="ba-img">
+          </div>
+
+          <div class="ba-divider"></div>
+
+          <div class="ba-label before">Before</div>
+          <div class="ba-label after">After</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    
+<!--  treatments slider -->
+<section class="treatment-slider-section section-padding">
+
+  <div class="container">
+
+    <h3 class="sub-title text-center mb-5">
+      Advanced Dermatology Treatments
+    </h3>
+
+    <div class="treatment-slider"
+         (mouseenter)="stopAutoSlide()"
+         (mouseleave)="startAutoSlide()"(touchstart)="onTouchStart($event)"
+     (touchend)="onTouchEnd($event)">
+
+      <!-- SLIDE 1 -->
+      <div class="slide">
+        <div class="row align-items-center">
+
+          <div class="col-lg-6">
+            <img src="../../../assets/treatments/GlowReset.jpg"
+                 class="slider-img"
+                 alt="Glow Reset Facial">
+          </div>
+
+          <div class="col-lg-6">
+            <div class="slider-content">
+              <h4>Glow Reset: Hydra Glow Facial</h4>
+              <p>
+                Bring your skin back to life – fresh, radiant, and selfie-ready.
+                Our Hydra Glow Facial deeply cleanses, exfoliates, and hydrates
+                tired skin in just one session.
+                <br><br>
+                <strong>Why you’ll love it:</strong><br>
+                Instant radiance, smoother texture, zero downtime.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SLIDE 2 -->
+      <div class="slide">
+        <div class="row align-items-center">
+
+          <div class="col-lg-6">
+            <img src="../../../assets/treatments/balancedskin.jpg"
+                 class="slider-img"
+                 alt="Anti Acne Treatment">
+          </div>
+
+          <div class="col-lg-6">
+            <div class="slider-content">
+              <h4>Bye-Bye Bumps: Anti-Acne Rescue</h4>
+              <p>
+                Intensive acne therapy that calms redness,
+                prevents breakouts and fades acne marks.
+                <br><br>
+                <strong>Why you’ll love it:</strong><br>
+                Balanced skin and visibly clearer tone.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SLIDE 3 -->
+      <div class="slide">
+        <div class="row align-items-center">
+
+          <div class="col-lg-6">
+            <img src="../../../assets/treatments/Smooth-safe-laser.jpg"
+                 class="slider-img"
+                 alt="Laser Hair Reduction">
+          </div>
+
+          <div class="col-lg-6">
+            <div class="slider-content">
+              <h4>Smooth & Safe: Laser Hair Reduction</h4>
+              <p>
+                USFDA-approved laser technology for permanent hair removal.
+                <br><br>
+                <strong>Why you’ll love it:</strong><br>
+                No waxing, no ingrown hair, silky smooth skin.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SLIDE 4 -->
+      <div class="slide">
+        <div class="row align-items-center">
+
+          <div class="col-lg-6">
+            <img src="../../../assets/treatments/skin-therapy.jpg"
+                 class="slider-img"
+                 alt="Medi Facial">
+          </div>
+
+          <div class="col-lg-6">
+            <div class="slider-content">
+              <h4>Skin Therapy with Science: Medi-Facials</h4>
+              <p>
+                Dermatologist-powered facial treatments targeting pigmentation,
+                dullness and aging.
+                <br><br>
+                <strong>Why you’ll love it:</strong><br>
+                Deep nourishment and clinic-level care.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
